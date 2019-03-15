@@ -1,0 +1,18 @@
+{
+    "almuerzo":[{
+        "item": "Hamburguesa simple",
+        "price": 3500
+        },{
+        "item": "Hamburguesa doble",
+        "price": 4500  
+        },{
+        "item": "Papas",
+        "price": 2500
+        },{
+        "item": "Agua",
+        "price": 500    
+        },{
+        "item": "Soda",
+        "price": 1500    
+        }]
+}

@@ -1,0 +1,18 @@
+{
+    "desayuno":[{
+        "item": "Sanwich de jamón y queso",
+        "price": 4500
+        },{
+        "item": "Huevo y pan",
+        "price": 2500  
+        },{
+        "item": "Café",
+        "price": 2500
+        },{
+        "item": "Jugo de Naranja",
+        "price": 500    
+        },{
+        "item": "Soda",
+        "price": 1500    
+        }]
+}
