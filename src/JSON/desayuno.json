@@ -1,18 +1,23 @@
 {
     "desayuno":[{
         "item": "Sanwich de jamón y queso",
-        "price": 4500
+        "price": 4500,
+        "img": "../Imagenes/tostado-de-jamon-y-queso.png"
         },{
-        "item": "Huevo y pan",
-        "price": 2500  
+        "item": "Tostadas con huevo",
+        "price": 2500,
+        "img": ""  
         },{
         "item": "Café",
-        "price": 2500
+        "price": 2500,
+        "img": ""
         },{
         "item": "Jugo de Naranja",
-        "price": 500    
+        "price": 500,
+        "img": ""  
         },{
         "item": "Soda",
-        "price": 1500    
+        "price": 1500,
+        "img": ""   
         }]
 }

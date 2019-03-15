@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import db from '../FirestoreConfig';
 
+
 class ClientName extends Component {
     constructor(props){
         super(props);
@@ -18,14 +19,17 @@ class ClientName extends Component {
     render(){
         
     return(
-        <div>
+        <div className= 'container'>
+            <div className="row-6">
+                <div className="col-6">         
             <label>
-            Órden a nombre de:
+            <h5>Órden a nombre de:</h5>
             </label>
             <input type='text' value={this.state.name}  onChange={this.changeValue} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"/>
             <input type='submit' className="btn btn-success" value='Guardar Nombre'  onClick={this.action}/>
-            
-            <h1>{this.state.value}</h1>
+            <h1>{this.state.name}</h1>
+                </div>
+            </div>
         </div>
     );
     }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {desayuno} from '../JSON/desayuno.json';
+import '../CSS/Desayuno.css'
 
 class Desayuno extends Component{
     constructor(props){
@@ -15,12 +16,13 @@ class Desayuno extends Component{
             ...this.state,
             toShow: this.state.desayuno.map((food, i)=>{
                 return(
-                    <div className= 'container'>
-                        <div className="row">
-                        <div className="col-4">
+                    <div className= 'container btnDesayuno'>
+                        <div className="row-6">
+                        <div className="col-6">
                             <div className="btn btn-warning">
-                            {/* {food.item} 
-                            {food.price}*/}
+                            {food.item}      {""}
+                            {food.price} {""}
+                            {/* <div>src={require(`${food.img}`)}</div> */}
                             </div> 
                         </div>
                         </div>
@@ -30,9 +32,13 @@ class Desayuno extends Component{
     }
     render(){
         return(
-        <div>
-        <button type="button" className="btn btn-secondary btn-lg btn-block #E7B6E4" onClick={this.comida}>Desayuno</button>
-        {this.state.toShow} 
+            <div className= 'container btnDesayuno'>
+            <div className="row-6">
+            <div className="col-6">
+                <button type="button" className="btn btn-info btn-lg btn-block #E7B6E4" onClick={this.comida}>Desayuno</button>
+                {this.state.toShow} 
+        </div>
+        </div>
         </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {almuerzo} from '../JSON/almuerzo.json';
+import '../CSS/Almuerzo.css'
 
 class Almuerzo extends Component{
     constructor(props){
@@ -8,21 +9,21 @@ class Almuerzo extends Component{
             almuerzo,
             toShow: []
         }
-        this.comida = this.comida.bind(this);
+        this.comidas = this.comidas.bind(this);
     }
-    comida(){
+    comidas(){
         this.setState({
             ...this.state,
-            toShow: this.state.almuerzo.map((food, i)=>{
+            toShow: this.state.almuerzo.map((foods, i)=>{
                 return(
-                <div className= 'container'>
-                    <div className="row">
-                    <div className="col-4">
-                        <div className="btn btn-warning">
-                        {food.item} 
-                        {food.price}
-                        </div> 
-                    </div>
+                <div className= 'container btnAlmuerzo"'>
+                    <div className="row-6">
+                        <div className="col-6">
+                                <div className="btn btn-warning">
+                                {foods.item} {""}
+                                {foods.price}
+                            </div> 
+                        </div>
                     </div>
                 </div> 
                 )
@@ -32,9 +33,13 @@ class Almuerzo extends Component{
 
     render(){
         return(
-            <div>
-            <button type="button" className="btn btn-secondary btn-lg btn-block">Almuerzo</button>
-            {this.state.toShow}
+            <div className= 'container btnAlmuerzo'>
+                    <div className="row-6">
+                        <div className="col-6">
+                            <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidas}>Almuerzo</button>
+                            {this.state.toShow}
+            </div>
+            </div>
             </div>
         )
     }

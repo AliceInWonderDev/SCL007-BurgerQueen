@@ -1,0 +1,12 @@
+.btnDesayuno{
+    position: relative;
+    justify-items:  flex-start;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px; 
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.container{
+    justify-content: center;
+}
