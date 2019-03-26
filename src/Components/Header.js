@@ -6,9 +6,8 @@ class Header extends Component {
         return (
             <div className='container'>
                 <div className="row">
-                    <div className="col">
                         <img src = {logo}/>
-                    </div>
+                    
                 </div>
             </div>
         )

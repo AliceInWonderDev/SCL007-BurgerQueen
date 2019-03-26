@@ -2,7 +2,7 @@
     "desayuno":[{
         "item": "Sanwich de jamón y queso",
         "price": 4500,
-        "img": "../Imagenes/tostado-de-jamon-y-queso.png"
+        "img": "url(https://scm-assets.constant.co/scm/unilever/a6798e909fa57bfd19c3e7f00737e5d6/c1dceca7-09b1-489b-9c7d-0efcdce72860.jpg)"
         },{
         "item": "Tostadas con huevo",
         "price": 2500,

@@ -34,7 +34,7 @@ class Almuerzo extends Component{
     render(){
         return(
             <div className= 'container btnAlmuerzo'>
-                    <div className="row-6">
+                    <div className="row">
                         <div className="col-6">
                             <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidas}>Almuerzo</button>
                             {this.state.toShow}

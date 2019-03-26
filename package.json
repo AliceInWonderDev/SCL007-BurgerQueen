@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
     "firebase": "^5.8.5",
     "react": "^16.8.4",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.5",
     "reactstrap": "^7.1.0"
   },
@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/AliceInWonderDev/SCL007-BurgerQueen/issues"
   },
-  "homepage": "https://mymenu-7db0e.firebaseapp.com/"
+  "homepage": "https://mymenu-7db0e.firebaseapp.com/",
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }

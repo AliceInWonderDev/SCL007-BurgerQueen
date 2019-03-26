@@ -17,12 +17,12 @@ class Desayuno extends Component{
             toShow: this.state.desayuno.map((food, i)=>{
                 return(
                     <div className= 'container btnDesayuno'>
-                        <div className="row-6">
+                        <div className="row">
                         <div className="col-6">
                             <div className="btn btn-warning">
                             {food.item}      {""}
                             {food.price} {""}
-                            {/* <div>src={require(`${food.img}`)}</div> */}
+                            <img src = {food.img}/>
                             </div> 
                         </div>
                         </div>
@@ -33,10 +33,10 @@ class Desayuno extends Component{
     render(){
         return(
             <div className= 'container btnDesayuno'>
-            <div className="row-6">
+            <div className="row">
             <div className="col-6">
-                <button type="button" className="btn btn-info btn-lg btn-block #E7B6E4" onClick={this.comida}>Desayuno</button>
-                {this.state.toShow} 
+                <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comida}>Desayuno</button>
+                {/* {this.state.toShow}  */}
         </div>
         </div>
         </div>

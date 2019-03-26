@@ -1,14 +1,19 @@
-import firebase from 'firebase/app';
-import 'firebase/app';
-import 'firebase/firestore';
+import * as firebase from 'firebase';
+//import firestore from 'firebase/firestore'
 
-firebase.initializeApp({
+const settings = {timestampsInSnapshots: true};
+
+var config = {
     apiKey: "AIzaSyC1FYcyypn7TpG1RtvoiWF5CLtWdt0rl7k",
     authDomain: "mymenu-7db0e.firebaseapp.com",
     databaseURL: "https://mymenu-7db0e.firebaseio.com",
     projectId: "mymenu-7db0e",
-});
+    storageBucket: "mymenu-7db0e.appspot.com",
+    messagingSenderId: "348562786338"
+};
 
-let db = firebase.firestore();
+firebase.initializeApp(config);
 
-export default db;
+firebase.firestore().settings(settings);
+
+export default firebase;
