@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from '../FirestoreConfig';
 import { Link } from 'react-router-dom';
 
+
 class Edit extends Component {
 
 constructor(props) {
@@ -66,6 +67,7 @@ return (
     <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
+        
         <h3 class="panel-title">
             EDIT BOARD
         </h3>

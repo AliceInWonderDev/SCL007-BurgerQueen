@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import firebase from '../FirestoreConfig';
 import { Link } from 'react-router-dom';
-import Desayuno from './Desayuno';
+import Menu from './Menu';
 
 class Create extends Component {
 
@@ -49,6 +49,7 @@ return (
     <div className="container">
     <div className="panel panel-default">
         <div className="panel-heading">
+        
         <h3 className="panel-title">
             Nuevo Pedido
         </h3>
@@ -60,11 +61,15 @@ return (
                 <label for="client">Nombre del Cliente:</label>
                 <input type="text" className="form-control" name="client" value={client} onChange={this.onChange} placeholder="Nombre del Cliente" />
                 </div>
+
                 <div className="form-group">
-                <label for="description">Description:</label>
-                
+                <label for="description">Pedido:</label>
+                <div>
+                    <Menu/>
+                </div>
                 <textArea className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="3">{description}</textArea>
                 </div>
+
                 <div className="form-group">
                 <label for="author">Author:</label>
                 <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import firebase from './FirestoreConfig';
+import Logo from './Components/Logo';
 // import ClientName from './Components/ClientName';
 // import FirebaseName from './Components/FirebaseNames';
 
@@ -45,23 +46,27 @@ class App extends Component {
 
     render() {
         return (
-        <div class="container">
-        <div class="panel panel-default">
-        <div class="panel-heading">
-        <h3 class="panel-title">
+    <div className="container">
+    <div className="panel panel-default">
+    <div className="panel-heading">
+            <div>
+                <Logo/>
+            </div>
+        <h3 className="panel-title">
             Pedidos Cocina(app)
         </h3>
-        </div>
-        <div class="panel-body">
+    </div>
+        <div className="panel-body">
         <h4><Link to="/create">Nuevo Pedido</Link></h4>
-        <table class="table table-stripe">
+        <table className="table table-stripe">
             <thead>
             <tr>
                 <th>Nombre del Cliente</th>
-                <th>Description</th>
-                <th>Author</th>
+                <th>Pedido</th>
+                <th>Mesero</th>
             </tr>
             </thead>
+
             <tbody>
             {this.state.boards.map(board =>
                 <tr>
@@ -71,6 +76,7 @@ class App extends Component {
                 </tr>
             )}
             </tbody>
+
         </table>
         </div>
     </div>

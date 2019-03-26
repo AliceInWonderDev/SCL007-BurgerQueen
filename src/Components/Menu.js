@@ -51,15 +51,10 @@ render(){
         <div>
             <div className= 'container'>
                 <div className="row">
-                    <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidaUno}>Desayuno</button>
-                    {this.state.toShow}
+                    <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidaUno} onChange={this.onChange}>Desayuno</button>
+                    <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidaDos} onChange={this.onChange}>Almuerzo</button>  
+                {this.state.toShow}
                 </div>
-            </div>
-            <div className= 'container'>
-            <div className="row">
-                    <button type="button" className="btn btn-info btn-lg btn-block" onClick={this.comidaDos}>Almuerzo</button>
-                    {this.state.toShow}
-            </div>
             </div>
         </div>
     )
