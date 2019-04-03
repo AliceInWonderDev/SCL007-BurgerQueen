@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import firebase from '../FirestoreConfig';
 import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import Almuerzo from './Almuerzo';
+import Desayuno from './Desayuno';
+import {Container, Row, Col} from 'react-bootstrap';
 
 class Create extends Component {
 
@@ -11,7 +13,7 @@ super();
 this.ref = firebase.firestore().collection('boards');
 this.state = {
     client: '',
-    description: '',
+    description: [],
     author: ''
 };
 }
@@ -20,7 +22,11 @@ const state = this.state
 state[e.target.name] = e.target.value;
 this.setState(state);
 }
-
+onChange2 = (e) => {
+    const state = this.state
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+    }
 onSubmit = (e) => {
 e.preventDefault();
 
@@ -33,7 +39,7 @@ this.ref.add({
 }).then((docRef) => {
     this.setState({
     client: '',
-    description: '',
+    description: [],
     author: ''
     });
     this.props.history.push("/")
@@ -49,32 +55,41 @@ return (
     <div className="container">
     <div className="panel panel-default">
         <div className="panel-heading">
-        
         <h3 className="panel-title">
             Nuevo Pedido
         </h3>
         </div>
         <div className="panel-body">
-            <h4><Link to="/" className="btn btn-primary">Lista de Pedidos</Link></h4>
-            <form onSubmit={this.onSubmit}>
+                <div className="form-group">
+                <label for="description"> <h4>Pedido:</h4></label>
+                {/* <div>
+                    <Menu/>
+                </div> */}
+                {/* <button className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80">{description} </button> */}
+                <Container>
+                    <Row>
+                        <Col>
+                        <input onChange={this.onChange}/><Almuerzo/>{description}<Desayuno/>
+                        {/* <input onChange={this.onChange2}/><Desayuno/> */}
+                        </Col>
+                    </Row>
+                </Container>
+                </div>
+
                 <div className="form-group">
                 <label for="client">Nombre del Cliente:</label>
-                <input type="text" className="form-control" name="client" value={client} onChange={this.onChange} placeholder="Nombre del Cliente" />
+                <input type="text" className="form-control" name="client" value={client} onChange={this.onChange} placeholder="nombre del cliente" />
                 </div>
 
                 <div className="form-group">
-                <label for="description">Pedido:</label>
-                <div>
-                    <Menu/>
+                <label for="author">Mesero:</label>
+                <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="mesero" />
                 </div>
-                <textArea className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="3">{description}</textArea>
-                </div>
+                
+                <h4><Link to="/" className="btn btn-primary">Lista de Pedidos</Link></h4>
+                <form onSubmit={this.onSubmit}>
 
-                <div className="form-group">
-                <label for="author">Author:</label>
-                <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
-                </div>
-                <button type="submit" className="btn btn-success">Submit</button>
+                <button type="submit" className="btn btn-success">Enviar</button>
             </form>
         </div>
     </div>

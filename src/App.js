@@ -3,14 +3,8 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import firebase from './FirestoreConfig';
 import Logo from './Components/Logo';
-// import ClientName from './Components/ClientName';
-// import FirebaseName from './Components/FirebaseNames';
-
-// import Almuerzo from './Components/Almuerzo';
-// import Menu from './Components/Menu';
-// import Header from './Components/Header';
-
-
+import Create from './Components/Create';
+import {Container, Row, Col} from 'react-bootstrap';
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +12,8 @@ class App extends Component {
         this.ref = firebase.firestore().collection('boards');
         this.unsubscribe = null;
         this.state = {
-        boards: []
+        boards: [],
+        description:[] //nuevo
         };
     }
 
@@ -46,18 +41,27 @@ class App extends Component {
 
     render() {
         return (
-    <div className="container">
-    <div className="panel panel-default">
-    <div className="panel-heading">
+    <div>
+        <Container>
+            
             <div>
                 <Logo/>
             </div>
+        <Row>
+        <Col>
+            <Create/>
+        </Col>
+        <Col>        
         <h3 className="panel-title">
-            Pedidos Cocina(app)
+            Pedidos Cocina
         </h3>
-    </div>
+    
         <div className="panel-body">
-        <h4><Link to="/create">Nuevo Pedido</Link></h4>
+        <h4>
+        {/* <Link to="/create"> */}
+        Nuevo Pedido
+        {/* </Link> */}
+        </h4>
         <table className="table table-stripe">
             <thead>
             <tr>
@@ -66,7 +70,6 @@ class App extends Component {
                 <th>Mesero</th>
             </tr>
             </thead>
-
             <tbody>
             {this.state.boards.map(board =>
                 <tr>
@@ -79,26 +82,10 @@ class App extends Component {
 
         </table>
         </div>
+        </Col>
+        </Row>
+        </Container>
     </div>
-    </div>
-
-            // <div className='App'>
-            //     <header className='App-header'>
-            //     <Header/>
-                // </header>
-                // <div>
-                // <ClientName/>
-                // <FirebaseName/> 
-                // </div>
-                // <div className="body">
-                // <div class="">
-                // </div>
-                // <Menu/>
-                    // {/* <Desayuno/> */}
-                    // {/* <Almuerzo/>
-                    //  */}
-                // </div>
-            // </div>
         )
     }
 }

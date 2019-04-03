@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../FirestoreConfig';
 import { Link } from 'react-router-dom';
+import Logo from '../Components/Logo';
 
 
 class Show extends Component {
@@ -42,7 +43,9 @@ return (
     <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-        
+        <div>
+            <Logo/>
+        </div>
         <h4><Link to="/">Pedido del Cliente:</Link></h4>
         <h3 class="panel-title">
             {this.state.board.client}

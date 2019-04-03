@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../FirestoreConfig';
 import { Link } from 'react-router-dom';
+import Logo from '../Components/Logo';
 
 
 class Edit extends Component {
@@ -67,7 +68,9 @@ return (
     <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">
-        
+        <div>
+            <Logo/>
+        </div>
         <h3 class="panel-title">
             EDIT BOARD
         </h3>
@@ -79,12 +82,14 @@ return (
             <label for="client">Nombre del Cliente:</label>
             <input type="text" class="form-control" name="client" value={this.state.client} onChange={this.onChange} placeholder="Nombre del Cliente" />
             </div>
+
             <div class="form-group">
-            <label for="description">Description:</label>
+            <label for="description">Pedido:</label>
             <input type="text" class="form-control" name="description" value={this.state.description} onChange={this.onChange} placeholder="Description" />
             </div>
+
             <div class="form-group">
-            <label for="author">Author:</label>
+            <label for="author">Mesero:</label>
             <input type="text" class="form-control" name="author" value={this.state.author} onChange={this.onChange} placeholder="Author" />
             </div>
             <button type="submit" class="btn btn-success">Submit</button>

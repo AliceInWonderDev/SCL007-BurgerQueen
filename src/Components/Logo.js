@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../Imagenes/logo.png'
+import { Link } from 'react-router-dom';
 import '../CSS/Logo.css';
 
 class Logo extends Component{
@@ -7,8 +8,7 @@ class Logo extends Component{
         return(
             <div>
                 <nav className="navbar">
-                    <a class="navbar-brand" href="#">
-                    <img src = {logo} width="40" height="40" class="d-inline-block align-top" alt="logo"/>Burguer Queen</a> 
+                    <Link to="/"><img src = {logo} width="100" height="100"  alt="logo"/></Link>
                 </nav>
             </div>
             
