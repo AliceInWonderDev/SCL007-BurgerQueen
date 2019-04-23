@@ -22,11 +22,7 @@ const state = this.state
 state[e.target.name] = e.target.value;
 this.setState(state);
 }
-onChange2 = (e) => {
-    const state = this.state
-    state[e.target.name] = e.target.value;
-    this.setState(state);
-    }
+
 onSubmit = (e) => {
 e.preventDefault();
 
@@ -65,11 +61,11 @@ return (
                 {/* <div>
                     <Menu/>
                 </div> */}
-                {/* <button className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80">{description} </button> */}
+                <button className="form-control" name="description" onChange={this.onChange} placeholder="Description" cols="80">{description} </button>
                 <Container>
                     <Row>
                         <Col>
-                        <input onChange={this.onChange}/><Almuerzo/>{description}<Desayuno/>
+                        {/* <input onChange={this.onChange}/><Almuerzo/>{description}<Desayuno/> */}
                         {/* <input onChange={this.onChange2}/><Desayuno/> */}
                         </Col>
                     </Row>

@@ -1,0 +1,33 @@
+
+.App {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .App-logo {
+    position: relative;
+    align-items: center;
+    height: 25vmin;  
+  }
+  
+  .App-header {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+  
+  .App-link {
+    color: #E7B6E4;
+  }
+  
+  h4{
+    color: #ffffff;
+  }
+  
+  .panel-body h4{
+    color: black;
+  }
+  
+  
